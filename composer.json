@@ -1,0 +1,38 @@
+{
+    "name": "rasim/php-mvc-core",
+    "description": "Shared PHP MVC core library extracted from Group A repos (PhoneBook-php, rest-api-php, rest-api-mvc-php). Contains Core router, Database PDO wrapper, Controller base class, and helper functions.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rasim Aghayev"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "firebase/php-jwt": "^6.10",
+        "endroid/qr-code": "^4.0",
+        "spomky-labs/otphp": "^12.0",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-session": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rasim\\PhpMvcCore\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
