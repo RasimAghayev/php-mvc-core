@@ -11,7 +11,7 @@
     "require": {
         "php": ">=8.2",
         "firebase/php-jwt": "^7.0",
-        "endroid/qr-code": "^4.0",
+        "endroid/qr-code": "^6.0",
         "spomky-labs/otphp": "^12.0",
         "ext-pdo": "*",
         "ext-json": "*",
