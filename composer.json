@@ -1,5 +1,5 @@
 {
-    "name": "rasim/php-mvc-core",
+    "name": "rasimaghayev/php-mvc-core",
     "description": "Shared PHP MVC core library extracted from Group A repos (PhoneBook-php, rest-api-php, rest-api-mvc-php). Contains Core router, Database PDO wrapper, Controller base class, and helper functions.",
     "type": "library",
     "license": "MIT",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rasim\\PhpMvcCore\\": "src/"
+            "RasimAghayev\\PhpMvcCore\\": "src/"
         },
         "files": [
             "src/helpers.php"

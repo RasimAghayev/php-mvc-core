@@ -1,4 +1,4 @@
-# rasim/php-mvc-core
+# rasimaghayev/php-mvc-core
 
 Shared PHP MVC core library extracted from Group A repos (PhoneBook-php, rest-api-php, rest-api-mvc-php).
 
@@ -15,7 +15,7 @@ Shared PHP MVC core library extracted from Group A repos (PhoneBook-php, rest-ap
 ## Installation
 
 ```bash
-composer require rasim/php-mvc-core
+composer require rasimaghayev/php-mvc-core
 ```
 
 ## Requirements

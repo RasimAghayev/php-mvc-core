@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Rasim\PhpMvcCore\Core;
-use Rasim\PhpMvcCore\Database;
-use Rasim\PhpMvcCore\Controller;
+use Rasim\PhpMvcCore\{
+    Core,
+    Database,
+    Controller
+};
 
 class CoreTest extends TestCase
 {

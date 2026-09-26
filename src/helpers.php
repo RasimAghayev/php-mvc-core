@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rasim\PhpMvcCore;
+namespace RasimAghayev\PhpMvcCore;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -10,7 +10,7 @@ use Endroid\QrCode\Writer\QrCodeWriter;
 use Endroid\QrCode\ErrorCorrectionLevel;
 use Endroid\QrCode\RoundBlockSizeMode;
 
-if (!function_exists('Rasim\PhpMvcCore\flash')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\flash')) {
     function flash(string $name = '', string $message = '', string $class = 'alert alert-success'): void
     {
         if (!empty($name)) {
@@ -33,14 +33,14 @@ if (!function_exists('Rasim\PhpMvcCore\flash')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\redirect')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\redirect')) {
     function redirect(string $page): void
     {
         header('location: ' . (defined('URLROOT') ? URLROOT . '/' . $page : $page));
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\getIPAddress')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\getIPAddress')) {
     function getIPAddress(): string
     {
         $ipaddress = '';
@@ -63,7 +63,7 @@ if (!function_exists('Rasim\PhpMvcCore\getIPAddress')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\microTimeSet')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\microTimeSet')) {
     function microTimeSet(): string
     {
         $parts = explode(' ', microtime());
@@ -72,7 +72,7 @@ if (!function_exists('Rasim\PhpMvcCore\microTimeSet')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\writeLog')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\writeLog')) {
     function writeLog(int $code, mixed $data): void
     {
         $log = microTimeSet() .
@@ -90,7 +90,7 @@ if (!function_exists('Rasim\PhpMvcCore\writeLog')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\getUrl')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\getUrl')) {
     function getUrl(): string
     {
         $scheme = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
@@ -100,7 +100,7 @@ if (!function_exists('Rasim\PhpMvcCore\getUrl')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\HTTPStatus')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\HTTPStatus')) {
     function HTTPStatus(int $code = 0, string $sts = '', string $forwardURL = '/', string $msg = '', mixed $data = null): void
     {
         http_response_code($code);
@@ -125,7 +125,7 @@ if (!function_exists('Rasim\PhpMvcCore\HTTPStatus')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\jwtEncode')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\jwtEncode')) {
     function jwtEncode(int $jwt_start_time, int $jwt_end_time, string $aud, array $user_arr_data): string
     {
         $payload = [
@@ -140,7 +140,7 @@ if (!function_exists('Rasim\PhpMvcCore\jwtEncode')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\jwtDecode')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\jwtDecode')) {
     function jwtDecode(string $jwt): array
     {
         $key = defined('JWT_SECRET_KEY') ? JWT_SECRET_KEY : 'changeme';
@@ -148,7 +148,7 @@ if (!function_exists('Rasim\PhpMvcCore\jwtDecode')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\generateRandomString')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\generateRandomString')) {
     function generateRandomString(int $length = 20): string
     {
         $keys = array_merge(range('0', '9'), range('a', 'z'), range('A', 'Z'));
@@ -160,7 +160,7 @@ if (!function_exists('Rasim\PhpMvcCore\generateRandomString')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\console_log')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\console_log')) {
     function console_log(mixed $output, bool $with_script_tags = true): void
     {
         $js_code = "<script>console.log(" . json_encode($output, JSON_HEX_TAG) . ");</script>";
@@ -171,7 +171,7 @@ if (!function_exists('Rasim\PhpMvcCore\console_log')) {
     }
 }
 
-if (!function_exists('Rasim\PhpMvcCore\generateQrCode')) {
+if (!function_exists('RasimAghayev\PhpMvcCore\generateQrCode')) {
     function generateQrCode(string $data, string $outputFile = 'qrcode.png'): void
     {
         $writer = new QrCodeWriter();

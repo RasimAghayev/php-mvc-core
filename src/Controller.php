@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rasim\PhpMvcCore;
+namespace RasimAghayev\PhpMvcCore;
 
 class Controller
 {
