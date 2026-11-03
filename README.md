@@ -1,5 +1,8 @@
 # rasimaghayev/php-mvc-core
 
+![Views](https://hits.sh/github.com/RasimAghayev/php-mvc-core.svg?label=views&color=0e75b6)
+
+
 Shared PHP MVC core library extracted from Group A repos (PhoneBook-php, rest-api-php, rest-api-mvc-php).
 
 ## Contents
